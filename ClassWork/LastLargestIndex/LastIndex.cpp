@@ -18,10 +18,8 @@ int lastLargestIndex(int array[], int arraySize) {
     int maxLastIndex = 0;
 
     for(int i = 1; i < arraySize; i++){
-        if (array[i] > max){
+        if (array[i] => max){
             max = array[i];
-            maxLastIndex = i;
-        } else if (array[i] == max){
             maxLastIndex = i;
         }
     }
