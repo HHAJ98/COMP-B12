@@ -9,6 +9,19 @@ Date submitted: 2020/02/09
 #include <iostream>
 using namespace std;
 
+int lastLargestIndex(int [], int);
+
+int main(){
+    const int ARRAY_SIZE = 15;
+    int list[ARRAY_SIZE] = {23, 51, 38, 56, 83, 38, 36, 49, 72, 35, 83, 36, 38, 51, 45};
+    int maxLastIndex = lastLargestIndex(list, ARRAY_SIZE);
+    int max = list[maxLastIndex];
+
+    cout << "Max Value:\t\t\t" << max << endl;
+    cout << "Last index of max value:\t" << maxLastIndex << endl;
+
+}
+
 int lastLargestIndex(int array[], int arraySize) {
     if (arraySize == 0){
         return 0;
@@ -25,17 +38,4 @@ int lastLargestIndex(int array[], int arraySize) {
     }
 
     return maxLastIndex;
-
 }
-
-int main(){
-    const int ARRAY_SIZE = 15;
-    int list[ARRAY_SIZE] = {23, 51, 38, 56, 83, 38, 36, 49, 72, 35, 83, 36, 38, 51, 45};
-    int maxLastIndex = lastLargestIndex(list, ARRAY_SIZE);
-    int max = list[maxLastIndex];
-
-    cout << "Max Value:\t\t\t" << max << endl;
-    cout << "Last index of max value:\t" << maxLastIndex << endl;
-
-}
-
