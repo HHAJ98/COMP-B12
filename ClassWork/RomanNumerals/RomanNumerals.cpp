@@ -48,8 +48,7 @@ void romanType::romanToPositiveInteger() {
         {'L', 50},
         {'C', 100},
         {'D', 500},
-        {'M', 1000},
-        {'\0', 0}
+        {'M', 1000}
     };
         
     int total = 0;
