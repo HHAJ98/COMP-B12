@@ -7,7 +7,7 @@ class linkedList{
 public:
     linkedList();
     void append(int);
-    int deleteAfter(int);
+    void deleteFirstInstanceOf(int);
 private:
     node head;
     node dummy;
@@ -33,11 +33,10 @@ void linkedList::append(int value){
     lastNode = &newNode;
 }
 
-int linkedList::deleteAfter(int value){
-//	node *pointerToCurrNode = &dummy;
-//	while((*pointerToCurrNode).value != value){
-//    	//pointerToCurrNode = &(*pointerToCurrNode).next;
-//		
-//    }
-    return 0;
+void linkedList::deleteFirstInstanceOf(int value){
+	node *pointerToCurrNode = &dummy;
+	while((*pointerToCurrNode).value != value && (*pointerToCurrNode).next){
+    	pointerToCurrNode = (*pointerToCurrNode).next;
+		
+    }
 }
