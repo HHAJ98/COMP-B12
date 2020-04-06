@@ -20,21 +20,28 @@ int main() {
 	do {
 		cout << ">> ";
 		cin >> command;
-		if (command != "app" && command != "del") {
-			cout << "quitting..." << endl;
-			hasQuit = true;
-		} else if (command == "app") {
+		if (command == "quit" || command == "q") {
+			cout << "Are you sure you want to quit? yes/no" << endl;
+			cin >> command;
+			if (command == "y" || command == "yes") {
+				hasQuit = true;
+			} else {
+				continue;
+			}
+		} else if (command == "app" || command == "a") {
 			cin >> value;
 			list.append(value);
 			cout << "List: ";
 			list.printList();
-		} else if (command == "del") {
+		} else if (command == "del" || command == "d") {
 			cin >> value;
 			//deleteFirstInstanceOf returns false when it cannot find an elemnt to delete, true otherwise.
 			if (!list.deleteFirstInstanceOf(value))
 				cout << "couldn't find a node with that value, please try another value." << endl;
 			cout << "List: ";
 			list.printList();
+		} else {
+			cout << "Invalid command. Please use app, del, quit, or their one-letter equivalents." << endl;
 		}
 	} while (!hasQuit);
 	return 0;
