@@ -30,6 +30,7 @@ int main() {
 			list.printList();
 		} else if (command == "del") {
 			cin >> value;
+			//deleteFirstInstanceOf returns false when it cannot find an elemnt to delete, true otherwise.
 			if (!list.deleteFirstInstanceOf(value))
 				cout << "couldn't find a node with that value, please try another value." << endl;
 			cout << "List: ";
