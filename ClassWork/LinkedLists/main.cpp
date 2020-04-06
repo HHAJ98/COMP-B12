@@ -3,7 +3,7 @@ Author: Ferraro, AJ
 Assignment: Programming Assignment #05
 Course: COMP B12
 Instructor: Richard Miles
-Date submitted: 2020/##/##
+Date submitted: 2020/04/05
 */
 #include <string>
 #include "LinkedList.h"
