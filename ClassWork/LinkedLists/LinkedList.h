@@ -40,6 +40,10 @@ void linkedList::append(int value) {
 bool linkedList::deleteFirstInstanceOf (int value) {
 	node *previousNode = head;
 	node *currentNode = head;
+
+	if (head == nullptr){
+		return false;
+	}
 	
 	if (head->value == value) {
 		head = head->next;
